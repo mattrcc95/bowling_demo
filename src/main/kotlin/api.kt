@@ -3,9 +3,9 @@ fun updateScore(game: ArrayList<Frame>) : ArrayList<FramePostgre> {
     val listPostgre = arrayListOf<FramePostgre>()
     if(game.size > 1){
         for (i in 0 until game.size-1) {
-            if (game[i].bonusShots == 0 && !game[i+1].isUpdated) {
-                game[i+1].localScore += game[i].localScore
-                game[i+1].isUpdated = true
+            if (game[i].bonusShots == 0 && !game[i + 1].isUpdated) {
+                game[i + 1].localScore += game[i].localScore
+                game[i + 1].isUpdated = true
             }
         }
     }
